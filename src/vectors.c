@@ -1,39 +1,53 @@
-/* Vector Operations */
 #include "../header/includes.h"
 
-/* Add two vectors and return the resulting vector */
-vector vectorAdd(vector *v1, vector *v2){
-        vector result = {v1->x + v2->x, v1->y + v2->y, v1->z + v2->z };
-        return result;
-}
+/* Vector Operations
+** vectorAdd Add two vectors and return the resulting vector
+** vectorSub Subtract two vectors and return the resulting vector
+** vectorDot Multiply two vectors and return the resulting scalar (dot product)
+** vectorScale Calculate Vector x Scalar and return resulting Vector
+** vectorCross Calculate vector cross product and return resulting vector */
 
-/* Subtract two vectors and return the resulting vector */
-vector vectorSub(vector *v1, vector *v2)
+vector		vector_add(vector *v1, vector *v2)
 {
-        vector result = {v1->x - v2->x, v1->y - v2->y, v1->z - v2->z };
-        return result;
+	vector	result;
+
+	result.x = v1->x + v2->x;
+	result.y = v1->y + v2->y;
+	result.z = v1->z + v2->z;
+	return (result);
 }
 
-/* Multiply two vectors and return the resulting scalar (dot product) */
-double vectorDot(vector *v1, vector *v2)
+vector		vector_sub(vector *v1, vector *v2)
 {
-        return v1->x * v2->x + v1->y * v2->y + v1->z * v2->z;
+	vector	result;
+
+	result.x = v->x * c;
+	result.y = v->y * c;
+	result.z = v->z * c;
+	return (result);
 }
 
-/* Calculate Vector x Scalar and return resulting Vector*/ 
-vector vectorScale(double c, vector *v)
+double		vector_dot(vector *v1, vector *v2)
 {
-        vector result = {v->x * c, v->y * c, v->z * c };
-        return result;
+	return (v1->x * v2->x + v1->y * v2->y + v1->z * v2->z);
 }
 
-/* Calculate vector cross product and return resulting vector */
-vector vectorCross(vector *v1, vector *v2){
+vector		vector_scale(double c, vector *v)
+{
+	vector	result;
+
+	result.x = v->x * c;
+	result.y = v->y * c;
+	result.z = v->z * c;
+	return (result);
+}
+
+vector		vector_cross(vector *v1, vector *v2)
+{
 	vector result;
-	
+
 	result.x = (v1->y * v2->z) - (v1->z * v2->y);
 	result.y = (v1->z * v2->x) - (v1->x * v2->z);
 	result.z = (v1->x * v2->y) - (v1->y * v2->x);
-	
-	return result;
+	return (result);
 }
