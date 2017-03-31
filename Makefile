@@ -12,6 +12,10 @@ SRC 	= 	src/ray_trace2.c \
 			src/mlbx.c \
 			src/sphere.c \
 			src/tokenizer.c \
+			src/token_elem.c \
+			src/token_material.c \
+			src/token_sphere.c \
+			src/token_light.c \
 			src/vectors.c 
 
 all: $(NAME)
