@@ -4,13 +4,14 @@
 //#include "vectors.h"
 
 /* Sphere Primitive definition */
-typedef struct{
+typedef struct
+{
         vector pos;
         double radius;
         int material;
-}sphere;
+}					sphere;
 
-bool intersectRaySphere(ray *r, sphere *s, float *t);
+bool intersect_ray_sphere(ray *r, sphere *s, float *t);
 
 
 #endif /* _SPHERE_H_ */
