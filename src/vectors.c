@@ -21,9 +21,9 @@ vector		vector_sub(vector *v1, vector *v2)
 {
 	vector	result;
 
-	result.x = v->x * c;
-	result.y = v->y * c;
-	result.z = v->z * c;
+	result.x = v1->x - v2->x;
+	result.y = v1->y - v2->y;
+	result.z = v1->z - v2->z;
 	return (result);
 }
 

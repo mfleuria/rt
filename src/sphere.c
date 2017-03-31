@@ -23,7 +23,6 @@
 
 static bool	ft_check_closer(float discr, float b, float *t, bool retval)
 {
-	bool	retval;
 	float	sqrtdiscr;
 	float	t0;
 	float	t1;
@@ -51,13 +50,12 @@ bool		intersect_ray_sphere(ray *r, sphere *s, float *t)
 	float	c;
 	float	discr;
 
-	retval = FALSE;
-	dist = vectorSub(&r->start, &s->pos);
-	a = vectorDot(&r->dir, &r->dir);
-	b = 2 * vectorDot(&r->dir, &dist);
-	c = vectorDot(&dist, &dist) - (s->radius * s->radius);
+	dist = vector_sub(&r->start, &s->pos);
+	a = vector_dot(&r->dir, &r->dir);
+	b = 2 * vector_dot(&r->dir, &dist);
+	c = vector_dot(&dist, &dist) - (s->radius * s->radius);
 	discr = b * b - 4 * a * c;
 	if (discr < 0)
 		return (FALSE);
-	return (ft_check_closer(discr, b, t));
+	return (ft_check_closer(discr, b, t, FALSE));
 }
