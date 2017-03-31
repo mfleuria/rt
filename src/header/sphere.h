@@ -10,7 +10,7 @@ typedef struct{
         int material;
 }sphere;
 
-bool intersectRaySphere(ray *r, sphere *s, float *t);
+bool intersect_ray_sphere(ray *r, sphere *s, float *t);
 
 
 #endif /* _SPHERE_H_ */
