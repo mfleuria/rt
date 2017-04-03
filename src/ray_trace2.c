@@ -4,14 +4,14 @@ int main(int argc, char *argv[]){
 
 	ray r;
 	t_env e;
-	scene *myScene = NULL;
+	scene *my_scene = NULL;
 
 	/* Scene */
 	scene mine;
 	mine.materials = NULL;
 	mine.spheres = NULL;
 	mine.lights = NULL;
-	myScene = &mine;
+	my_scene = &mine;
 
 	if (argc != 2) 
 	{
@@ -20,14 +20,14 @@ int main(int argc, char *argv[]){
 	}
 
 	/* Build the scene */
-	if (tokenizer(argv[1], myScene) == -1) 
+	if (tokenizer(argv[1], my_scene) == -1) 
 		exit(-1);
-	init_mlx(&e, myScene);
+	init_mlx(&e, my_scene);
 
 	int x, y;
-	for(y = 0; y < myScene->height; y++)
+	for(y = 0; y < my_scene->height; y++)
 	{
-		for(x = 0; x < myScene->width; x++)
+		for(x = 0; x < my_scene->width; x++)
 		{	
 			float red = 0;
 			float green = 0;
@@ -52,7 +52,7 @@ int main(int argc, char *argv[]){
 				unsigned int i;
 				for(i = 0; i < 3; i++)
 				{
-					if(intersect_ray_sphere(&r, &myScene->spheres[i], &t))
+					if(intersect_ray_sphere(&r, &my_scene->spheres[i], &t))
 						currentSphere = i;
 				}
 				if(currentSphere == -1) break;
@@ -61,7 +61,7 @@ int main(int argc, char *argv[]){
 				vector newStart = vector_add(&r.start, &scaled);
 
 				/* Find the normal for this new vector at the point of intersection */
-				vector n = vector_sub(&newStart, &myScene->spheres[currentSphere].pos);
+				vector n = vector_sub(&newStart, &my_scene->spheres[currentSphere].pos);
 				float temp = vector_dot(&n, &n);
 				if(temp == 0) break;
 
@@ -69,13 +69,13 @@ int main(int argc, char *argv[]){
 				n = vector_scale(temp, &n);
 
 				/* Find the material to determine the colour */
-				material currentMat = myScene->materials[myScene->spheres[currentSphere].material];
+				material currentMat = my_scene->materials[my_scene->spheres[currentSphere].material];
 
 				/* Find the value of the light at this point */
 				unsigned int j;
 				for(j=0; j < 3; j++)
 				{
-					light currentLight = myScene->lights[j];
+					light currentLight = my_scene->lights[j];
 					vector dist = vector_sub(&currentLight.pos, &newStart);
 					if(!(vector_dot(&n, &dist) <= 0.0f))
 					{
@@ -91,7 +91,7 @@ int main(int argc, char *argv[]){
 							bool inShadow = FALSE;
 							unsigned int k;
 							for (k = 0; k < 3; ++k) {
-								if (intersect_ray_sphere(&lightRay, &myScene->spheres[k], &t)){
+								if (intersect_ray_sphere(&lightRay, &my_scene->spheres[k], &t)){
 									inShadow = TRUE;
 									break;
 								}

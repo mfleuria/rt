@@ -1,25 +1,27 @@
 #General scene
 #In the future, we can add a 'normalized' coordinate system.
 Scene{
-	materials=4
+	materials= 3
 	spheres=3
-	lights=2
+	lights=3
 	
-	width=800
-	height=600
-
+	width=1280
+	height=720
 }
+
 #Materials
 # id 0
 Material{
 	diffuse=1.0,0.0,0.0
 	reflection=0.2
 }
+
 #id 1
 Material{
 	diffuse=0.0,1.0,0.0
-	reflection=0.5
+	reflection=0.5    
 }
+
 #id 2
 Material{
 	diffuse=0.0,0.0,1.0
@@ -29,33 +31,38 @@ Material{
 #spheres
 #id 0
 Sphere{
-	position=200.0,300.0,0.0
+	position=100.0,300.0,100.0
 	radius=100
 	material=0
 }
+
 #id 1
 Sphere{
-	position=400.0,400.0,0.0
+	position=300.0,400.0,100.0
 	radius=100
 	material=1
 }
+
 #id 2
 Sphere{
-	position=500.0,140.0,0.0
+	position=400.0,140.0,50.0
 	radius=100
 	material=2
-}       
+}
+
 #lights
 #id 0
 Light{
 	position=0.0,240.0,-100.0
 	colour=1.0,1.0,1.0
 }
+
 #id 1
 Light{
-	position=3200.0,3000.0,-1000.0
+	position=3200.0,3000.0,100.0
 	colour=0.6,0.7,1.0	
 }
+
 #id 2
 Light{
 	position=600.0,0.0,-100.0

@@ -4,52 +4,53 @@
 #include <fcntl.h>
 #include "../header/includes.h"
 
-void			token_material(char *line, scene *myscene)
+void			token_material(char *line, scene *my_scene)
 {
 	line = ft_strchr(line, '=');
 	line++;
-	myscene->numMaterials = ft_atoi(line);
-	myscene->materials =
-		(material *)ft_memalloc(myscene->numMaterials * sizeof(material));
+	my_scene->num_materials = ft_atoi(line);
+	my_scene->materials =
+		(material *)ft_memalloc(my_scene->num_materials * sizeof(material));
 	ft_putstr("\nNumber of materials:");
-	ft_putnbr(myscene->numMaterials);
+	ft_putnbr(my_scene->num_materials);
 }
 
-void			token_sphere(char *line, scene *myscene)
+void			token_sphere(char *line, scene *my_scene)
 {
 	line = ft_strchr(line, '=');
 	line++;
-	myscene->numSpheres = ft_atoi(line);
-	myscene->spheres =
-		(sphere *)ft_memalloc(myscene->numSpheres * sizeof(sphere));
+	my_scene->num_spheres = ft_atoi(line);
+	my_scene->spheres =
+		(sphere *)ft_memalloc(my_scene->num_spheres * sizeof(sphere));
 	ft_putstr("\nNumber of Spheres: ");
-	ft_putnbr(myscene->numSpheres);
+	ft_putnbr(my_scene->num_spheres);
 }
 
-void			token_light(char *line, scene *myscene)
+void			token_light(char *line, scene *my_scene)
 {
 	line = ft_strchr(line, '=');
 	line++;
-	myscene->numLights = ft_atoi(line);
-	myscene->lights = (light *)ft_memalloc(myscene->numLights * sizeof(light));
+	my_scene->num_lights = ft_atoi(line);
+	my_scene->lights =
+		(light *)ft_memalloc(my_scene->num_lights * sizeof(light));
 	ft_putstr("\nNumber of Lights: ");
-	ft_putnbr(myscene->numLights);
+	ft_putnbr(my_scene->num_lights);
 }
 
-void			token_width(char *line, scene *myscene)
+void			token_width(char *line, scene *my_scene)
 {
 	line = ft_strchr(line, '=');
 	line++;
-	myscene->width = ft_atoi(line);
+	my_scene->width = ft_atoi(line);
 	ft_putstr("\nImage width: ");
-	ft_putnbr(myscene->width);
+	ft_putnbr(my_scene->width);
 }
 
-void			token_height(char *line, scene *myscene)
+void			token_height(char *line, scene *my_scene)
 {
 	line = ft_strchr(line, '=');
 	line++;
-	myscene->height = ft_atoi(line);
+	my_scene->height = ft_atoi(line);
 	ft_putstr("\nImage height: ");
-	ft_putnbr(myscene->height);
+	ft_putnbr(my_scene->height);
 }

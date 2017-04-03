@@ -12,9 +12,9 @@ typedef struct{
         
         int      width, height;
         
-        int numSpheres;
-        int numMaterials;
-        int numLights;
+        int num_spheres;
+        int num_materials;
+        int num_lights;
         
 }scene;
 

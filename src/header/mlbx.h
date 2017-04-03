@@ -20,6 +20,6 @@ typedef struct		s_env
 }					t_env;
 
 int					my_key_funct(int keycode, t_env *e); 
-void				init_mlx(t_env *e, scene *myScene);
+void				init_mlx(t_env *e, scene *my_scene);
 
 #endif /* _MLBX_H_ */
