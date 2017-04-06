@@ -9,15 +9,18 @@ void			token_light(char *line, scene *my_scene);
 void			token_width(char *line, scene *my_scene);
 void			token_height(char *line, scene *my_scene);
 /*token_material*/
-void		mat_diffuse(int mat_index, char *line, char **line2, scene *my_scene);
+void		mat_diffuse(int mat_index, char *line, scene *my_scene);
 void		mat_reflec(int mat_index, char *line, scene *my_scene);
 /*token_sphere*/
-void			sphere_pos(int sphere_index, char *line, char **line2, scene *my_scene);
+void			sphere_pos(int sphere_index, char *line, scene *my_scene);
 void			sphere_rad(int sphere_index, char *line, scene *my_scene);
 void			sphere_mat(int sphere_index, char *line, scene *my_scene);
 /*token_light*/
-void			light_pos(int light_index, char *line, char **line2, scene *my_scene);
-void			light_col(int light_index, char *line, char **line2, scene *my_scene);
+void			light_pos(int light_index, char *line, scene *my_scene);
+void			light_col(int light_index, char *line, scene *my_scene);
 /*token_detect*/
-int				token_detect(int fd, char *line, char **line2, scene *my_scene);
+int				token_detect(int fd, char *line, scene *my_scene);
+/*token_utils*/
+int				ft_strchrstr(char *str, char *elem);
+int				ft_len_tab(char **tab);
 #endif /* _TOKENIZER_H_ */

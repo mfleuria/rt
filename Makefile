@@ -14,6 +14,7 @@ SRC 	= 	src/ray_trace2.c \
 			src/token_sphere.c \
 			src/token_light.c \
 			src/token_detect.c \
+			src/token_utils.c \
 			src/vectors.c 
 
 all: $(NAME)
