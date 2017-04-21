@@ -1,6 +1,10 @@
 #General scene
 #In the future, we can add a 'normalized' coordinate system.
 Scene{
+	camera = 1
+	plan = 1
+	cylindre = 1
+	cone = 1
 	materials = 3
 	spheres = 3
 	lights = 3
@@ -30,21 +34,21 @@ Material{
 #spheres
 #id 0
 Sphere{
-	position = 100.0,300.0,100.0
+	position = 200.0,200.0,200.0
 	radius = 100
 	material = 0
 }
 
 #id 1
 Sphere{
-	position = 300.0,400.0,100.0
+	position = 400.0,400.0,400.0
 	radius = 100
 	material = 1
 }
 
 #id 2
 Sphere{
-	position = 400.0,140.0,50.0
+	position = 600.0,600.0,600.0
 	radius = 100
 	material = 2
 }
@@ -52,18 +56,47 @@ Sphere{
 #lights
 #id 0
 Light{
-	position = 0.0,240.0,-100.0
+	position = 0.0,0.0,0.0
 	colour = 1.0,1.0,1.0
 }
 
 #id 1
 Light{
-	position = 3200.0,3000.0,100.0
-	colour = 0.6,0.7,1.0	
+	position = 100.0,200.0,300.0
+	colour = 1.0,1.0,1.0
 }
 
 #id 2
 Light{
-	position = 600.0,0.0,-100.0
-	colour = 0.3,0.5,1.0	
+	position = 300.0,200.0,100.0
+	colour = 1.0,1.0,1.0
+}
+
+#camera
+Camera{
+	position = 0.0,0.0,0.0
+	oriantation = 0.0,0.0,0.0
+}
+
+#plan
+Plan{
+	normal = 300.0,200.0,100.0
+	offset = 1.0
+	material = 1
+}
+
+#cylindre
+Cylindre{
+	material = 0
+	axis = 50.0,50.0,100.0
+	position = 300.0,200.0,100.0
+	radius = 100
+}
+
+#cone
+Cone{
+	material = 0
+	axis = 50.0,50.0,100.0
+	apex = 50.0,50.0,100.0
+	angle = 90
 }

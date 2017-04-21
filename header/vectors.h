@@ -3,8 +3,8 @@
 
 /* The vector structure */
 typedef struct{
-        double x, y, z;
-}vector;
+	double	x, y, z;
+}			vector;
 
 
 /* Function Prototypes */

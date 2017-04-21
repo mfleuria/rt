@@ -6,11 +6,14 @@
 # include "def.h"
 # include "mlbx.h"
 # include "rtv1.h"
-# include "sphere.h"
 # include "vectors.h"
 # include "colour.h"
-#include "scene.h"
+# include "scene.h"
 # include "tokenizer.h"
+# include "sphere.h"
+# include "plan.h"
+# include "cylindre.h"
+# include "cone.h"
 
 
 //#include "raytrace.h"

@@ -8,13 +8,21 @@ LMX 	= -framework OpenGL -framework AppKit
 SRC 	= 	src/ray_trace2.c \
 			src/mlbx.c \
 			src/sphere.c \
-			src/tokenizer.c \
-			src/token_elem.c \
-			src/token_material.c \
-			src/token_sphere.c \
-			src/token_light.c \
-			src/token_detect.c \
-			src/token_utils.c \
+			src/tokenizer/tokenizer.c \
+			src/tokenizer/token_elem.c \
+			src/tokenizer/token_elem_compose.c \
+			src/tokenizer/token_detect_sphere.c \
+			src/tokenizer/token_detect_cyl.c \
+			src/tokenizer/token_detect_plan.c \
+			src/tokenizer/token_detect_cone.c \
+			src/tokenizer/token_material.c \
+			src/tokenizer/token_sphere.c \
+			src/tokenizer/token_light.c \
+			src/tokenizer/token_plan.c \
+			src/tokenizer/token_cyl.c \
+			src/tokenizer/token_cone.c \
+			src/tokenizer/token_detect.c \
+			src/tokenizer/token_utils.c \
 			src/vectors.c 
 
 all: $(NAME)

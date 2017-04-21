@@ -11,6 +11,9 @@ int main(int argc, char *argv[]){
 	mine.materials = NULL;
 	mine.spheres = NULL;
 	mine.lights = NULL;
+	mine.plan = NULL;
+	mine.cylindre = NULL;
+	mine.cone = NULL;
 	my_scene = &mine;
 
 	if (argc != 2) 

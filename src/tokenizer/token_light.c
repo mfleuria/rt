@@ -2,8 +2,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <fcntl.h>
+#include "../../header/includes.h"
 
-#include "../header/includes.h"
+/*
+** token_light recupere les donnees relative
+** au lumiere (position, couleur)
+*/
+
+/*
+** ligh_pos stock dans la structure scene
+** la position en X, Y, Z d'une lumiere
+*/
 
 void			light_pos(int l_index, char *line, scene *sc)
 {
@@ -11,6 +20,7 @@ void			light_pos(int l_index, char *line, scene *sc)
 	char		**line_split;
 
 	i = 0;
+	line = ft_strcln(line);
 	line_split = NULL;
 	line_split = ft_strsplit(line, ',');
 	sc->lights[l_index].pos.x = ft_atof(line_split[0]);
@@ -26,12 +36,17 @@ void			light_pos(int l_index, char *line, scene *sc)
 	}
 }
 
+/*
+** light_col stock dans la structure scene la couleur d'une lumiere
+*/
+
 void			light_col(int l_index, char *line, scene *sc)
 {
 	int			i;
 	char		**line_split;
-	
+
 	i = 0;
+	line = ft_strcln(line);
 	line_split = NULL;
 	line_split = ft_strsplit(line, ',');
 	sc->lights[l_index].intensity.red = ft_atof(line_split[0]);
