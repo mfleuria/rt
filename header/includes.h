@@ -14,6 +14,7 @@
 # include "plan.h"
 # include "cylindre.h"
 # include "cone.h"
+# include "global.h"
 
 
 //#include "raytrace.h"

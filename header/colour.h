@@ -1,9 +1,10 @@
 #ifndef _COLOUR_H_
 #define _COLOUR_H_
 
-typedef struct{
+typedef struct		s_colour
+{
 	double red, green, blue;
-}colour;
+}					t_colour;
 
 
 /* Function Prototypes */

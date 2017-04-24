@@ -5,8 +5,7 @@ FLAGS 	= -Wall -Werror -Wextra
 LIB 	= libft/libft.a
 LIBMLX 	= minilibx_macos/libmlx.a
 LMX 	= -framework OpenGL -framework AppKit 
-SRC 	= 	src/ray_trace2.c \
-			src/mlbx.c \
+SRC 	= 	src/mlbx.c \
 			src/sphere.c \
 			src/tokenizer/tokenizer.c \
 			src/tokenizer/token_elem.c \
@@ -23,6 +22,16 @@ SRC 	= 	src/ray_trace2.c \
 			src/tokenizer/token_cone.c \
 			src/tokenizer/token_detect.c \
 			src/tokenizer/token_utils.c \
+			src/raytracer/ft_color.c \
+			src/raytracer/ft_data.c \
+			src/raytracer/ft_error.c \
+			src/raytracer/ft_loop \
+			src/raytracer/ft_loop_light_and_shadow.c \
+			src/raytracer/ft_loop_structure.c \
+			src/raytracer/ft_main_init.c \
+			src/raytracer/ft_mlx.c \
+			src/raytracer/ft_ray.c \
+			src/raytracer/ft_ray_tracer_structure.c \
 			src/vectors.c 
 
 all: $(NAME)
