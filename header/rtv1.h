@@ -1,28 +1,24 @@
 #ifndef RTV1_H
 # define RTV1_H
 
-# include "vectors.h"
-# include "colour.h"
+# include "includes.h"
 
-/* Material Definition */
-typedef struct
+typedef struct		s_material
 {
-	colour diffuse;
-	float reflection;
-}	material;
+	t_color			diffuse;
+	float			reflection;
+}					t_material;
 
-/* Lightsource definition */
-typedef struct
+typedef struct		s_light
 {
-	vector pos;
-	colour intensity;
-}	light;
+	t_vector		pos;
+	t_color			intensity;
+}					t_light;
 
-/* The ray */
-typedef struct
+typedef struct		s_ray
 {
-        vector start;
-        vector dir;
-}	ray;
+	t_vector		start;
+	t_vector		dir;
+}					t_ray;
 
 #endif
